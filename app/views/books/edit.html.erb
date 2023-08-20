@@ -1,20 +1,35 @@
 <!--<h1>Books#edit</h1>-->
 <!--<p>Find me in app/views/books/edit.html.erb</p>-->
-
+<h1>Editing Book</h1>
 <body>
 <p id="notice"></p>
 <p>
-<%= form_with model: @book, method: :patch do |f| %>
-<strong>Title:</strong>
-<%= f.text_field :title %><!--カリキュラム参考-->
-</p>
-<p>
-<strong>Body:</strong>
-<%= f.text_area :body %><!--カリキュラム参考-->
-</p>
-<%= f.submit 'Update Book' %>
+
+
+<%= form_with model:@book, local:true do |book| %>
+
+  <div class="field">
+    <%= book.label :title %><br>
+    <%= book.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= book.label :body %><br>
+    <%= book.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= book.submit %>
+  </div>
 
 <% end %>
+
+
+
+
+
+
+
 <!--<a class="edit_169642" href="/books/169642/edit">Edit</a> |-->
 
 <%= link_to 'show', "/books/#{@book.id}" %>
