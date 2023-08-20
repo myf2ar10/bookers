@@ -1,2 +1,24 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<!--<h1>Books#edit</h1>-->
+<!--<p>Find me in app/views/books/edit.html.erb</p>-->
+
+<body>
+<p id="notice"></p>
+<p>
+<%= form_with model: @book, method: :patch do |f| %>
+<strong>Title:</strong>
+<%= f.text_field :title %><!--カリキュラム参考-->
+</p>
+<p>
+<strong>Body:</strong>
+<%= f.text_area :body %><!--カリキュラム参考-->
+</p>
+<%= f.submit 'Update Book' %>
+
+<% end %>
+<!--<a class="edit_169642" href="/books/169642/edit">Edit</a> |-->
+
+<%= link_to 'show', "/books/#{@book.id}" %>
+<a class="back" href="/books">Back</a>
+<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
+</div>
+</body>
