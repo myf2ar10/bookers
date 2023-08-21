@@ -33,14 +33,7 @@
   </thead>
   <tbody>
     <tr>
-  <% if @book.errors.any? %>
-  <!--%= @books.errors.count %>  <!--件のエラーが発生しました-->-->
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-  <% end %>
+
 <% @books.each do |book| %>
 <!--<td>Title</td>まちがい-->
   <td><%= book.title %></td>
@@ -56,6 +49,14 @@
 
   </tbody></table>
 <h2>New book</h2>
+  <% if @book.errors.any? %>
+  <!--%= @books.errors.count %>  <!--件のエラーが発生しました-->-->
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
 <!--メンタ-->
 <%= form_with model:@book, local:true do |book| %>
 
