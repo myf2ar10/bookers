@@ -23,6 +23,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to @book
     else
+      @books = Book.all
       render :index
     end
   end

@@ -22,4 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-<!--あ-->
+<!--202308211604寺田様。renderの前に@booksを定義する。9章の復習。-->
