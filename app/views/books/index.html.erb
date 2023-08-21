@@ -51,7 +51,7 @@
   </tbody></table>
 <h2>New book</h2>
   <% if @book.errors.any? %>
-  <!--%= @books.errors.count %>  <!--件のエラーが発生しました-->-->
+  <%= @book.errors.count %>errors prohibited this book from being saved:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -62,12 +62,12 @@
 <%= form_with model:@book, local:true do |book| %>
 
   <div class="field">
-    <%= book.label :title %>
+    <%= book.label :title %><br>
     <%= book.text_field :title %>
   </div>
 
   <div class="field">
-    <%= book.label :body %>
+    <%= book.label :body %><br>
     <%= book.text_area :body %>
   </div>
 
@@ -96,4 +96,10 @@
 <!--</form>-->
 
 
-<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div></body><umsdataelement id="UMSSendDataEventElement" data="https://bookers-level1.herokuapp.com/books" docguid="null"></umsdataelement><div id="tmtoolbar_manual_rating_injected" style="display: none;">init</div></html>
+<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
+</div>
+</body>
+<umsdataelement id="UMSSendDataEventElement" data="https://bookers-level1.herokuapp.com/books" docguid="null">
+</umsdataelement>
+<div id="tmtoolbar_manual_rating_injected" style="display: none;">init</div>
+</html>

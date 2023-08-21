@@ -19,12 +19,13 @@
 
 
 
-
-
-
+<!--%= link_to "Edit", edit_book_path(book.id) %>-->
+<!--%= link_to 'show', "/books/#{@book.id}" %>-->
+<!--<a class="edit" href= "/books" >edit</a>-->
+<%= link_to "edit", edit_book_path(@book.id) %>
 <!--<a class="edit_169642" href="/books/169642/edit">Edit</a> |-->
 <a class="back" href="/books">Back</a>
-<!--↑link_toをつかう-->
+<!--link_to-->
 
 
 <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;">
