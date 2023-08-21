@@ -42,6 +42,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully updated."      # みてもらう
       redirect_to book_path(@book.id)
     else
+      flash[:notice] = "error."      # みてもらう
       render :show
     end
   end
